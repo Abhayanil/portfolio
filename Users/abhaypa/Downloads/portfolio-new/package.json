@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-new",
+  "homepage": "https://abhayanil.github.io/portfolio/",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp .nojekyll dist/ && cp public/404.html dist/",
+    "preview": "vite preview --base=/portfolio/",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "bootstrap-icons": "^1.11.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.2.6"
+  }
+}
