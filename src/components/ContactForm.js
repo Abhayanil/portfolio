@@ -50,7 +50,8 @@ const ContactForm = () => {
       setIsSubmitting(true);
       
       try {
-        // Simulate API call with timeout
+        // In a real application, you would send this data to a server
+        // For now, we'll simulate an API call and provide contact info
         await new Promise(resolve => setTimeout(resolve, 1000));
         
         console.log("Form submitted successfully:", formData);
@@ -59,9 +60,12 @@ const ContactForm = () => {
         
         // Reset success message after 5 seconds
         setTimeout(() => setSubmitSuccess(false), 5000);
+        
+        // In a production environment, you might use a service like EmailJS, Formspree, or your own backend
+        // Example: await emailjs.send('service_id', 'template_id', formData, 'user_id');
       } catch (error) {
         console.error("Error submitting form:", error);
-        setErrors({ submit: 'Failed to submit the form. Please try again.' });
+        setErrors({ submit: 'Failed to submit the form. Please try again or contact me directly at abhaypa1925@gmail.com' });
       } finally {
         setIsSubmitting(false);
       }
@@ -74,7 +78,8 @@ const ContactForm = () => {
       
       {submitSuccess && (
         <div className="alert alert-success" role="alert">
-          Thank you for your message! I'll get back to you soon.
+          <h5><i className="bi bi-check-circle-fill me-2"></i>Thank you for your message!</h5>
+          <p className="mb-0">I'll get back to you soon. You can also reach me directly at abhaypa1925@gmail.com or +91 8129679886.</p>
         </div>
       )}
       
