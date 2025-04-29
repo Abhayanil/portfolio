@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Projects from './components/Projects';
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
+import Navbar from './components/Navbar.jsx';
+import Projects from './components/Projects.jsx';
+import ContactForm from './components/ContactForm.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/Home.jsx';
+import About from './pages/About.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './styles/main.css';

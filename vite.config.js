@@ -16,10 +16,14 @@ const getBasePath = () => {
 };
 
 export default defineConfig({
-  root: 'public',
+  // Set root to '.' if index.html is in the root directory
+  root: '.', // Ensure this is set to the root directory
   plugins: [react()],
-  base: getBasePath(),
+  base: '/portfolio/', // set base to /portfolio/ under GitHub Pages (note the trailing slash)
   build: {
-    outDir: 'dist'
+    outDir: 'dist' // Ensure this matches your deployment directory
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json']
   }
 });
